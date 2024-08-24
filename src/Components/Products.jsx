@@ -19,20 +19,8 @@ function Products() {
       live: true,
       Case: true,
     },
-    {
-      title: "Layout Land",
-      description:
-        "An interactive learning game that can educate and entertain you on the basics of web layouts in Webflow.",
-      live: true,
-      Case: false,
-    },
-    {
-      title: "Brightwave",
-      description:
-        "Brightwave, a category disruptor came to a us to build their brand from scratch and make a statement on its launch.",
-      live: true,
-      Case: false,
-    },
+
+
     {
       title: "Showcase",
       description:
@@ -80,11 +68,11 @@ function Products() {
   const [position, setPosition] = useState(0);
 
   const mover = (val) => {
-    setPosition(val * 23);
+    setPosition(val * 18);
   };
 
   return (
-    <div className="mt-52 flex items-center flex-col justify-center relative">
+    <div className="mt-52 flex items-center flex-col justify-between relative ">
       {data.map((elem, index) => (
         <Product mover={mover} count={index} key={index} val={elem} />
       ))}
@@ -93,69 +81,45 @@ function Products() {
           initial={{ y: position }}
           animate={{ y: position + `rem` }}
           transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
-          className="window absolute w-[32rem] overflow-hidden h-[23rem] bg-white left-[22%] "
+          className="window absolute w-[25rem] overflow-hidden h-[18rem] bg-white left-[22%] "
         >
           <motion.div
             animate={{ y: -position + `rem` }}
             className="w-full h-full bg-blue-400"
-
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
           ></motion.div>
           <motion.div
             animate={{ y: -position + `rem` }}
             className="w-full h-full bg-red-400"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
           ></motion.div>
           <motion.div
             animate={{ y: -position + `rem` }}
             className="w-full h-full bg-red-600"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
           ></motion.div>
           <motion.div
             animate={{ y: -position + `rem` }}
             className="w-full h-full bg-violet-800"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
           ></motion.div>
           <motion.div
             animate={{ y: -position + `rem` }}
             className="w-full h-full bg-orange-400"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
           ></motion.div>
           <motion.div
             animate={{ y: -position + `rem` }}
             className="w-full h-full bg-gray-400"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
           ></motion.div>
           <motion.div
             animate={{ y: -position + `rem` }}
             className="w-full h-full bg-sky-600"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
+            transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.6 }}
           ></motion.div>
-          <motion.div
-            animate={{ y: -position + `rem` }}
-            className="w-full h-full bg-pink-100"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
-          ></motion.div>
-          <motion.div
-            animate={{ y: -position + `rem` }}
-            className="w-full h-full bg-zinc-400"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
-          ></motion.div>
-          <motion.div
-            animate={{ y: -position + `rem` }}
-            className="w-full h-full bg-amber-500"
-          transition={{ease:[0.76, 0, 0.24, 1],duration: .6}}
-
-          ></motion.div>
+          
+          
         </motion.div>
       </div>
     </div>
